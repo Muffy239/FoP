@@ -1,3 +1,6 @@
 {
-  "python.REPL.enableREPLSmartSend": false
+    "cSpell.words": [
+        "dbns"
+    ],
+    "python.REPL.enableREPLSmartSend": false
 }
