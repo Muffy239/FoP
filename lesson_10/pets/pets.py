@@ -18,7 +18,7 @@ class NeighborhoodPets:
         # *                      {'Pet Name' : { 'Species' : pet_species,
         # *                                      'Owner' : Pet_owner }}
 
-    def add_pet(self, pet_species, pet_name, pet_owner):
+    def add_pet(self, pet_name, pet_species, pet_owner):
         if pet_name in self._pet_dictionary:
             raise DuplicateNameError(f"{pet_name} is already added.")
         self._pet_dictionary[pet_name] = {
@@ -40,6 +40,7 @@ pet = NeighborhoodPets()
 pet.add_pet("Ted", "Cat", "adrian")
 pet.add_pet("Brian", "Dog", "Daniel")
 pet.add_pet("Ian", "Snake", "Sarah")
+
 
 print(pet._pet_dictionary)
 
