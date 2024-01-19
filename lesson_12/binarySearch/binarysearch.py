@@ -2,20 +2,21 @@ def binarySearch(sorted_list, target):
     low = 0
     high = len(sorted_list) - 1
 
+    #* Check if the 
     while low <= high:
-        mid = (low + high) // 2
-
-        guess = sorted_list[mid]  # * our initial guess / pointer
+        middle = (low + high) // 2  #* "//" is floor division returning the lowest whole number after the division is done 
+        guess = sorted_list[middle] #* now that we have determined to middle of the book we throw our guess into the list
+                                    #* and verify if we're correct. If NOT we find out if the guess was higher or lower than the  
+        if guess == target:         #* target value.
+            return middle
         
-        if guess == target:       #* Checks if we've found the target number
-            return mid
+        if guess < target:        #* our guess is lower than the desired "target" number. so we try again.
+            low = middle + 1
         
-        if guess > target:        #* If our guess it too high we guess lower
-            high = mid - 1
-        else:                     #* If our guess it too lower we guess higher
-            low = mid + 1
-            
-    return -1                     #* the target is not in the list and we return -1
+        elif guess > target:
+            high = middle - 1
+    
+    return -1
 
 
 if __name__ == "__main__":
