@@ -1,3 +1,5 @@
+import re
+
 # 1. Write a function that uses a regex expression to return the boolean True if the string that is passed in contains only upper and lowercase letters, numbers, and underscores.
 # Exmaples:
 # Input: 'The quick brown fox jumps over the lazy dog.'
@@ -5,6 +7,16 @@
 # Input: 'Python_Exercise_1'
 # Output: True
 
+
+#! 1 COMPLETE
+# sentence = "Python_Exercise_1"
+
+# def regexOne(givenString):
+    
+#     pattern = r'[a-zA-Z0-9_]+'
+#     return bool(re.fullmatch(pattern, givenString))
+
+# print(regexOne(sentence))
 
 
 # 2. Write a function that uses a regex expression to return the boolean True if the string that is passed in starts with the number 5.
@@ -15,6 +27,17 @@
 # Output: True
 
 
+#! 2 COMPLETE
+# sentence = '5-762145'
+
+# def regexOne(sentence):
+    
+#     pattern = r'^5'
+    
+#     return bool(re.search(pattern, sentence))
+
+# print(regexOne(sentence))
+
 
 # 3. Write a function that uses a regex expression to return the boolean True if the string that is passed in has a number at the end.
 # Exmaple:
@@ -23,6 +46,17 @@
 # Input: 'abcdef7'
 # Output: True
 
+#! 3 COMPLETE
+# sentence = 'abcdef'
+
+# def regexFinder(sentence):
+    
+    
+#     pattern =r'[0-9$]'
+    
+#     return bool(re.search(pattern,sentence))
+
+# print(regexFinder(sentence))
 
 
 # 4. Write a function that uses a regex expression to return a list of all the instances of dog or dogs.
@@ -31,18 +65,53 @@
 # Output: ['dog', 'dog', 'dogs', 'dogs', 'dog']
 
 
+# #! 4 COMPLETE
+# sentence = 'Hey dog, how are you dog, where are all the dogs? Man these dogs are lost dog on it.'
+
+# def regexFinder(sentence):
+    
+    
+#     pattern = r'(dog[s]?)'
+    
+#     return  re.findall(pattern,sentence)
+    
+# print(regexFinder(sentence))
+
 
 # 5. Write a function that uses a regex expression to return a list that only includes the numbers.
 # Exmaple:
 # Input: 'Ten 10, Twenty 20, Thirty 30'
 # Output: ['10', '20', '30']
 
+#! 5 COMPLETE
+# sentence = 'Ten 10, Twenty 20, Thirty 30'
 
+# def regexFinder(sentence):
+    
+#     pattern =r'[0-9]+'
+    
+#     return re.findall(pattern, sentence)
+
+# print(regexFinder(sentence))
 
 # 6. Write a function that uses a regex expression to return a list with all the words that start with 'a' or 'e'.
 # Exmaple:
 # Input: 'The following example creates an array list with 50 elements.'
 # Output: ['example', 'an', 'array', 'elements']
+
+
+#! 6 COMPLETE
+
+# sentence = 'The following example creates an array list with 50 elements.'
+
+# def regexFinder(sentence):
+    
+#     pattern =r'\b[ea]\w*'
+    
+#     return re.findall(pattern, sentence)
+
+# print(regexFinder(sentence))
+
 
 
 
@@ -51,6 +120,17 @@
 # Input: '21 Rainbow Road'
 # Output: '21 Rainbow Rd.'
 
+#! 7 COMPLETE
+
+# sentence = '21 Rainbow Road'
+
+# def regexFinder(sentence):
+    
+#     pattern = r'\bRoad'
+    
+#     return re.sub(pattern, 'Rd.', sentence)
+
+# print(regexFinder(sentence))
 
 
 # 8. Write a function that uses a regex expression to replace all occurrences of space, comma, or period with a colon.
@@ -65,6 +145,17 @@
 # Input: 'The quick brown fox jumps over the lazy dog.'
 # Output: ['quick', 'brown', 'jumps']
 
+#! 8 COMPLETE
+
+# sentence = 'The quick brown fox jumps over the lazy dog.'
+
+# def regexFinder(sentence):
+    
+#     pattern = r'\b\w{5}\b'
+    
+#     return re.findall(pattern, sentence)
+
+# print(regexFinder(sentence))
 
 
 # 10. Write a function that uses a regex expression to return a string that has all extra spaces removed. One space between words should be kept, but any extra spaces should be removed.
